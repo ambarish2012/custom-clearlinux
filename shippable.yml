@@ -1,0 +1,18 @@
+language: node_js
+
+runtime:
+  nodePool: u16custom
+
+# Version number
+node_js:
+  - 6.11
+  - 8.6
+
+build:
+  pre_ci_boot:
+    image_name: clearlinux-git-ignore-ssl
+    image_tag: dev
+    pull: false
+  
+  ci:
+    - openssl version
